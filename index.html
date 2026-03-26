@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bárbara Corrêa | Escritora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --rosa-suave: #fff5f7;
+            --rosa-salmon: #fa8072;
+            --vinho: #634447;
+            --texto: #4a4a4a;
+            --branco: #ffffff;
+            --dourado-rosa: linear-gradient(90deg, #e7b1b1, #decba4, #e7b1b1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--rosa-suave);
+            color: var(--texto);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Filete Dourado */
+        .divisor-dourado {
+            height: 2px;
+            background: var(--dourado-rosa);
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            background-color: var(--branco);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--vinho);
+            margin-bottom: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--vinho);
+            font-weight: 600;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--rosa-salmon) !important;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 50px;
+            transition: opacity 0.3s;
+        }
+
+        .btn-whatsapp:hover { opacity: 0.8; }
+
+        /* Frases Background - Encostando nas laterais */
+        .quote-section {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .frase-escritor {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-style: italic;
+            color: var(--vinho);
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Livros - Altura reduzida */
+        section.conteudo {
+            padding: 40px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .livro-container {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .livro-capa {
+            flex: 0 0 220px; /* Largura fixa menor */
+            height: 320px;   /* Altura reduzida */
+            background: #f9f9f9;
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .livro-capa img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .livro-info h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; }
+        
+        .btn-amazon {
+            display: inline-block;
+            background-color: var(--vinho);
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .detalhes-produto {
+            font-size: 0.85rem;
+            background: var(--rosa-suave);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Autora */
+        .sobre-autora {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 10%;
+        }
+
+        .foto-autora {
+            flex: 0 0 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid white;
+        }
+
+        .foto-autora img { width: 100%; height: 100%; object-fit: cover; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--vinho);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .livro-container, .sobre-autora { flex-direction: column; text-align: center; }
+            .livro-capa { flex: 0 0 auto; width: 180px; height: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bárbara Corrêa</h1>
+        <nav>
+            <a href="#livros">Livros</a>
+            <a href="#autora">Autora</a>
+            <a href="https://wa.me/5562981998181" class="btn-whatsapp" target="_blank">Contato</a>
+        </nav>
+    </header>
+
+    <div class="divisor-dourado"></div>
+
+    <div style="height: 2px; background: transparent;"></div>
+
+    <section class="quote-section" style="background-image: linear-gradient(rgba(255,245,247,0.8), rgba(255,245,247,0.8)), url('escrevendo.png');">
+        <p class="frase-escritor">"Escrever é um ato de amor, uma forma de eternizar sentimentos que o tempo tenta apagar."</p>
+    </section>
+
+    <section id="livros" class="conteudo">
+        <div class="livro-container">
+            <div class="livro-capa">
+                <img src="amor-em-tempos-de-guerra.jpg" alt="Amor em Tempos de Guerra">
+            </div>
+            <div class="livro-info">
+                <h2>Amor em Tempos de Guerra</h2>
+                <p><small>por Bárbara Corrêa (Autor) | eBook Kindle</small></p>
+                <p style="margin-top:10px">A história de Eleonora e Heitor é um retrato da capacidade humana de resistir e de amar, mesmo quando o mundo ao redor parece estar desmoronando...</p>
+                <a href="https://www.amazon.com.br/amor-tempos-guerra-B%C3%A1rbara-Corr%C3%AAa-ebook/dp/B0DR6FGY12" class="btn-amazon">Link do Livro</a>
+                <div class="detalhes-produto">
+                    <h3>Detalhes do produto</h3>
+                    <ul>
+                        <li><strong>ASIN:</strong> B0DR6FGY12</li>
+                        <li><strong>Data da publicação:</strong> 21 dezembro 2024</li>
+                        <li><strong>Idioma:</strong> Português</li>
+                        <li><strong>Tamanho do arquivo:</strong> 113 KB</li>
+                        <li><strong>Páginas:</strong> 36 páginas</li>
+                        <li><strong>Ranking:</strong> Nº 2.150 em Romance para Jovens</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="livro-container">
+            <div class="livro-capa">
+                <img src="a-ama-e-o-libertino.jpg" alt="A Dama e o Libertino">
+            </div>
+            <div class="livro-info">
+                <h2>A Dama e o Libertino</h2>
+                <p><small>por Bárbara Corrêa (Autor) | eBook Kindle</small></p>
+                <p style="margin-top:10px">Isabel de La Corte é forçada a se casar com Sebastián Velázquez. Um romance inesperado acontece desafiando suas crenças sobre o amor.</p>
+                <a href="https://www.amazon.com.br/Dama-Libertino-B%C3%A1rbara-Corr%C3%AAa-ebook/dp/B0F1WL7R29" class="btn-amazon">Link do Livro</a>
+                <div class="detalhes-produto">
+                    <h3>Detalhes do produto</h3>
+                    <ul>
+                        <li><strong>ASIN:</strong> B0F1WL7R29</li>
+                        <li><strong>Data da publicação:</strong> 17 março 2025</li>
+                        <li><strong>Idioma:</strong> Português</li>
+                        <li><strong>Tamanho do arquivo:</strong> 414 KB</li>
+                        <li><strong>Páginas:</strong> 46 páginas</li>
+                        <li><strong>Ranking:</strong> Nº 472 em Romance Histórico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section" style="background-image: linear-gradient(rgba(255,245,247,0.8), rgba(255,245,247,0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1973');">
+        <p class="frase-escritor">"Não existe nada que conquiste mais o coração do que uma história contada com a alma."</p>
+    </section>
+
+    <section id="autora" class="sobre-autora">
+        <div class="foto-autora">
+            <img src="barbara-correa.jpg" alt="Bárbara Corrêa">
+        </div>
+        <div class="texto-autora">
+            <h2>Sobre a Autora</h2>
+            <p>Meu nome é Bárbara, sou mãe de duas meninas e de um bebê menino, que iluminam meus dias com amor e alegria. Sou casada há 11 anos, e minha família é meu maior refúgio e inspiração.</p><br>
+            <p>Minha jornada profissional começou na área da saúde, como técnica de enfermagem na pediatria, onde aprendi sobre empatia, resiliência e o valor do cuidado. Com esforço e dedicação, me tornei enfermeira, profissão que abraço com paixão e compromisso...</p><br>
+            <p>Hoje, tenho o imenso prazer de compartilhar com o mundo o fruto desse sonho: meu primeiro romance, <strong>Amor em Tempos de Guerra</strong>.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bárbara Corrêa - Escritora</p>
+    </footer>
+
+</body>
+</html>
